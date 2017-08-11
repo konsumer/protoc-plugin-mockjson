@@ -1,0 +1,30 @@
+{
+  "name": "protoc-plugin-mockjson",
+  "version": "1.0.0",
+  "description": "Generate JSON mocks from proto definition",
+  "main": "index.js",
+  "scripts": {
+    "test": "protoc test/api.proto -I ./test --mockjson_out=out/"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/konsumer/protoc-plugin-mockjson.git"
+  },
+  "author": "David Konsumer <konsumer@jetboystudio.com> (http://konsumer.js.org)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/konsumer/protoc-plugin-mockjson/issues"
+  },
+  "homepage": "https://github.com/konsumer/protoc-plugin-mockjson#readme",
+  "dependencies": {
+    "babel-preset-env": "^1.6.0",
+    "babel-register": "^6.24.1",
+    "protoc-plugin": "0.0.6"
+  },
+  "babel": {
+    "presets": ["env"]
+  },
+  "bin": {
+    "protoc-gen-mockjson": "index.js"
+  }
+}
